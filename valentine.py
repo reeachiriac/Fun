@@ -1,12 +1,8 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-# =========================
-# Customize these
-# =========================
-PAGE_TITLE = "Valentine?"
-GIF_URL = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDZ2emhpOHl1cGk2aGxuY2N3NGwzNW4xcmVoMG1oOXVjMTB5cDVwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qFmdpUKAFZ6rMobzzu/giphy.gif"  # <-- put YOUR gif link here
-# Tip: use a direct .gif URL or a Giphy "media.giphy.com/media/<id>/giphy.gif" link.
+PAGE_TITLE = "yes or no?"
+GIF_URL = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDZ2emhpOHl1cGk2aGxuY2N3NGwzNW4xcmVoMG1oOXVjMTB5cDVwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qFmdpUKAFZ6rMobzzu/giphy.gif"
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon="💘", layout="centered")
 
@@ -295,19 +291,6 @@ html = f"""
     yesBtn.addEventListener("click", () => {{
       arena.style.display = "none";
       result.style.display = "block";
-      // confetti-ish hearts (simple)
-      for (let i = 0; i < 16; i++) {{
-        const s = document.createElement("div");
-        s.textContent = "💖";
-        s.style.position = "absolute";
-        s.style.left = (10 + Math.random()*80) + "%";
-        s.style.top = (10 + Math.random()*70) + "%";
-        s.style.fontSize = (18 + Math.random()*26) + "px";
-        s.style.opacity = "0.85";
-        s.style.transform = "translate(-50%,-50%) rotate(" + (Math.random()*30-15) + "deg)";
-        s.style.pointerEvents = "none";
-        document.getElementById("card").appendChild(s);
-        setTimeout(() => s.remove(), 2200);
       }}
     }});
 
